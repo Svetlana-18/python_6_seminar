@@ -1,4 +1,4 @@
-# 1. Представлен список чисел. Необходимо вывести элементы исходного списка, значения которых больше предыдущего элемента. 
+# 1. Представлен список чисел. Необходимо вывести элементы исходного списка, значения которых больше предыдущего элемента.
 # Use comprehension.
 # in
 # 9
@@ -23,10 +23,10 @@ def element_search(num):
     print(my_list)
     return [my_list[num] for num in range(1, len(my_list)) if my_list[num] > my_list[num - 1]]
 
+
 number = (int(input('введите длину списка: ')))
 res = element_search(number)
 print(res)
-
 
 
 # my_list = [15, 2, 3, 1, 7, 5, 4, 10]
