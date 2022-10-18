@@ -18,24 +18,18 @@
 from random import sample
 
 
-def more_then(num):
+def element_search(num):
     my_list = sample(range(num * 3), num)
     print(my_list)
     return [my_list[num] for num in range(1, len(my_list)) if my_list[num] > my_list[num - 1]]
 
-
-print(more_then(int(input())))
-
-#  ------------------------------------------- вариант решения ---------------------------------------------------------
-
-from random import randint
+number = (int(input('введите длину списка: ')))
+res = element_search(number)
+print(res)
 
 
-def more_then(num):
-    original_list = [randint(0, 1000) for _ in range(num)]
-    print(original_list)
-    return [num for i, num in enumerate(original_list[1:]) if num > original_list[i]]
 
-
-print(more_then(int(input())))
-
+# my_list = [15, 2, 3, 1, 7, 5, 4, 10]
+# my_new_list = [el for num, el in enumerate(my_list) if my_list[num - 1] < my_list[num]]
+# print(f'Исходный список {my_list}')
+# print(f'Новый список {my_new_list}')
